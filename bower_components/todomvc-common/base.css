@@ -90,6 +90,7 @@ input[type="checkbox"] {
 #header {
 	padding-top: 15px;
 	border-radius: inherit;
+	position: relative;
 }
 
 #header:before {
@@ -108,6 +109,34 @@ input[type="checkbox"] {
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
 	border-top-left-radius: 1px;
 	border-top-right-radius: 1px;
+}
+
+#header .priority-btn {
+    height: auto;
+    position: absolute;
+    margin-top: 16px;
+    top: 0;
+    bottom: 0;
+    left: 34px;
+    padding: 0 4px;
+    font-size: 24px;
+    background-color: #f8f8f8;
+		/*color: #d00;*/
+		z-index: 10;
+		/* Mobile Safari */
+		border: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+}
+
+#header .priority-btn:after {
+	content: "!";
+}
+
+#header.priority {
+	color: #d00;
 }
 
 #new-todo,
